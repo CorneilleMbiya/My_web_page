@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_Application</title>
+    <link rel="stylesheet" href="My_Application.css">
+    <style>
+        body {
+            text-decoration: none;
+            background-image: url(pool.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        .navbar {
+            background-color: rgb(220, 20, 137);
+            font-family: 'Times New Roman', Times, serif;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        * {
+            box-sizing: border-box;
+            width: 250px;
+            height: 50px;
+            margin-top: 25px;
+            border-radius: 5px;
+            border: 5px;
+            font-size: large;
+        }
+        #sw{
+            font-size: 40px;
+            font-style: italic;
+            color: rgb(74, 9, 61);
+            text-align: left;
+            animation: move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-delay: 1s;
+            animation-timing-function: linear;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin-top: 300px;
+            top: 80%;
+            
+        }
+        @keyframes move{
+            from{margin-left: 0%;}
+            to{margin-left: 100%;}
+        }
+
+        
+        
+        
+    
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <select onchange="Redirection(this.value)">
+            <option selected value="0">Select your area here:</option>
+            <option value="login.html">Member</option>
+            <option value="2">Men</option>
+            <option value="3">Women</option>
+            <option value="4">Kids</option>
+            <option value="5">About us</option>
+        </select>
+        </select>
+    </nav>
+    <div id="sw">CM LLC, Swimming into practice</div>
+<script>
+    function Redirection(src)
+    {
+        window.location=src;
+    }
+</script>
+</body>
+</html>
